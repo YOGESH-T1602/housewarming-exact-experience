@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ta">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#210b08">
+<title>புதுமனை புகுவிழா | Housewarming Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="invitationApp" class="app">
+
+  <!-- ONE CONTINUOUS OPENING: the actual invitation travels out as the doors open. -->
+  <section class="scene scene-door active" id="sceneDoor" aria-label="Temple doors and invitation reveal">
+    <div class="portrait-stage door-stage" id="doorStage">
+      <img class="temple-backdrop" src="assets/temple-backdrop.jpg" alt="">
+      <div class="door-world" id="threeDoorHost" aria-label="Two carved wooden temple doors">
+        <div class="door-fallback left" aria-hidden="true"></div>
+        <div class="door-fallback right" aria-hidden="true"></div>
+      </div>
+      <div class="door-light" aria-hidden="true"></div>
+
+      <div class="door-copy" id="doorCopy">
+        <div class="ornament">✦ &nbsp; ❧ &nbsp; ✦</div>
+        <p class="eyebrow">WITH GOD'S BLESSINGS</p>
+        <h1>A Beautiful<br><em>New Beginning</em></h1>
+        <p class="tamil-intro">இறையருளுடன் இனிய இல்லறத் தொடக்கம்</p>
+        <button id="openDoors" class="gold-button" type="button">TAP TO OPEN THE DOORS <span>✦</span></button>
+        <p class="micro-hint">திறக்கவும் · TAP TO BEGIN</p>
+      </div>
+
+      <!-- The exact invitation artwork is the only invitation. It emerges from the doorway. -->
+      <button class="invitation-reveal" id="invitationReveal" type="button" aria-label="Open the housewarming invitation">
+        <span class="invitation-glow" aria-hidden="true"></span>
+        <img src="assets/actual-invitation.jpg" alt="Actual Tamil housewarming invitation">
+        <span class="invitation-tap-label">TAP TO VIEW INVITATION</span>
+      </button>
+      <div class="door-bottom-caption">A WARM INVITATION TO OUR NEW HOME</div>
+    </div>
+  </section>
+
+  <!-- The actual invitation opens into a full portrait view; no second letter/envelope. -->
+  <section class="scene scene-actual" id="sceneActual" aria-label="Actual housewarming invitation">
+    <div class="actual-stage">
+      <p class="eyebrow">OUR HOUSEWARMING INVITATION</p>
+      <figure class="actual-frame">
+        <img src="assets/actual-invitation.jpg" alt="Your actual Tamil housewarming invitation" class="actual-poster">
+      </figure>
+      <button id="toThanks" class="gold-button" type="button">CONTINUE <span>✦</span></button>
+    </div>
+  </section>
+
+  <section class="scene scene-thanks" id="sceneThanks" aria-label="Thank you">
+    <div class="thanks-stage">
+      <figure class="thanks-photo-wrap">
+        <img src="assets/kuthuvilakku-thankyou.jpg" alt="Traditional kuthuvilakku lamp and housewarming pooja arrangement" class="thanks-photo">
+      </figure>
+      <div class="thanks-copy">
+        <p class="eyebrow">WITH GRATITUDE AND BLESSINGS</p>
+        <h2>Thank You</h2>
+        <p class="thanks-tamil">தங்கள் வருகையே எங்கள் மகிழ்ச்சி!</p>
+        <p class="thanks-text">Your presence and blessings make our new beginning even more special.</p>
+        <button id="replay" class="outline-button" type="button">↶ REPLAY INVITATION</button>
+      </div>
+    </div>
+  </section>
+</main>
+<script type="module" src="script.js"></script>
+</body>
+</html>
